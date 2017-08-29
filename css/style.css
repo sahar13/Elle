@@ -1,0 +1,486 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.2; }
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal; }
+
+ul {
+  padding-left: 1.4em;
+  list-style: square; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* end reset browser styles */
+/* @font-face Fonts*/
+@font-face {
+  font-family: 'Oblik-Bold';
+  src: url("../fonts/Oblik-Bold.otf"); }
+@font-face {
+  font-family: 'GandhiSans-Bold';
+  src: url("../fonts/GandhiSans-Bold.otf"); }
+@font-face {
+  font-family: 'GandhiSans-BoldItalic';
+  src: url("../fonts/GandhiSans-BoldItalic.otf"); }
+@font-face {
+  font-family: 'GandhiSans-Italic';
+  src: url("../fonts/GandhiSans-Italic.otf"); }
+@font-face {
+  font-family: 'GandhiSans-Regular.otf';
+  src: url("../fonts/GandhiSans-Regular.otf"); }
+@font-face {
+  font-family: 'WorkSans-Black';
+  src: url("../fonts/WorkSans-Black.otf"); }
+@font-face {
+  font-family: 'WorkSans-Bold';
+  src: url("../fonts/WorkSans-Bold.otf"); }
+@font-face {
+  font-family: 'WorkSans-ExtraLight';
+  src: url("../fonts/WorkSans-ExtraLight.otf"); }
+@font-face {
+  font-family: 'WorkSans-ExtraBold';
+  src: url("../fonts/WorkSans-ExtraBold.otf"); }
+@font-face {
+  font-family: 'WorkSans-Light';
+  src: url("../fonts/WorkSans-Light.otf"); }
+@font-face {
+  font-family: 'WorkSans-SemiBold';
+  src: url("../fonts/WorkSans-SemiBold.otf"); }
+@font-face {
+  font-family: 'WorkSans-Hairline';
+  src: url("../fonts/WorkSans-Hairline.otf"); }
+@font-face {
+  font-family: 'WorkSans-Medium';
+  src: url("../fonts/WorkSans-Medium.otf"); }
+@font-face {
+  font-family: 'WorkSans-Regular';
+  src: url("../fonts/WorkSans-Regular.otf"); }
+@font-face {
+  font-family: 'WorkSans-Thin';
+  src: url("../fonts/WorkSans-Thin.otf"); }
+a {
+  text-decoration: none; }
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto; }
+  .wrapper .hero {
+    background-image: url(../images/hero.png);
+    height: 876px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+    .wrapper .hero .nav {
+      text-align: center;
+      padding-top: 40px; }
+      .wrapper .hero .nav ul.nav-main {
+        margin: 0;
+        padding: 0;
+        list-style-type: none; }
+        .wrapper .hero .nav ul.nav-main li {
+          display: none;
+          position: relative;
+          justify-content: left;
+          width: 19%; }
+          .wrapper .hero .nav ul.nav-main li:hover .dropdown {
+            display: block; }
+          .wrapper .hero .nav ul.nav-main li a {
+            font-family: 'GandhiSans-Bold';
+            font-size: 20px;
+            letter-spacing: 1px;
+            color: #2b2b2b;
+            text-transform: lowercase;
+            color: #2b2b2b; }
+            .wrapper .hero .nav ul.nav-main li a:hover {
+              color: #bd1660; }
+          .wrapper .hero .nav ul.nav-main li .dropdown {
+            position: absolute;
+            left: 15%;
+            display: none; }
+            .wrapper .hero .nav ul.nav-main li .dropdown p {
+              background-color: #fff;
+              margin: 10px 0;
+              padding: 0 10px;
+              opacity: 0.9; }
+              .wrapper .hero .nav ul.nav-main li .dropdown p a {
+                font-family: 'GandhiSans-Regular';
+                font-size: 16px;
+                color: #2b2b2b;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-align: center;
+                text-transform: lowercase;
+                line-height: 32px; }
+                .wrapper .hero .nav ul.nav-main li .dropdown p a:hover {
+                  color: #bd1660; }
+          @media (min-width: 736px) {
+            .wrapper .hero .nav ul.nav-main li {
+              display: inline-block; } }
+      .wrapper .hero .nav div.nav-sm {
+        text-align: center; }
+        .wrapper .hero .nav div.nav-sm #hamburger,
+        .wrapper .hero .nav div.nav-sm #cross {
+          cursor: pointer; }
+        .wrapper .hero .nav div.nav-sm ul.nav-sm-ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none; }
+          .wrapper .hero .nav div.nav-sm ul.nav-sm-ul li {
+            margin: 10px; }
+            .wrapper .hero .nav div.nav-sm ul.nav-sm-ul li a {
+              font-family: 'GandhiSans-Bold';
+              font-size: 20px;
+              letter-spacing: 1px;
+              color: #2b2b2b;
+              text-transform: lowercase;
+              color: #2b2b2b; }
+              .wrapper .hero .nav div.nav-sm ul.nav-sm-ul li a:hover {
+                color: #bd1660; }
+            .wrapper .hero .nav div.nav-sm ul.nav-sm-ul li .dropdown p {
+              background-color: #fff;
+              margin: 10px 0;
+              padding: 0 10px;
+              opacity: 0.9; }
+              .wrapper .hero .nav div.nav-sm ul.nav-sm-ul li .dropdown p a {
+                font-family: 'GandhiSans-Regular';
+                font-size: 16px;
+                color: #2b2b2b;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-align: center;
+                text-transform: lowercase;
+                line-height: 32px; }
+                .wrapper .hero .nav div.nav-sm ul.nav-sm-ul li .dropdown p a:hover {
+                  color: #bd1660; }
+        @media (min-width: 736px) {
+          .wrapper .hero .nav div.nav-sm {
+            display: none; } }
+      .wrapper .hero .nav div.fitness-nav-sm {
+        text-align: center; }
+  .wrapper .hero-fitness {
+    background-image: none;
+    height: 525px; }
+    @media (min-width: 736px) {
+      .wrapper .hero-fitness {
+        height: 310px; } }
+  .wrapper .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 50px auto;
+    padding: 25px; }
+    .wrapper .cta h1 {
+      font-family: 'WorkSans-ExtraBold';
+      font-size: 56px;
+      color: #2b2b2b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center; }
+    .wrapper .cta #fitfeb {
+      font-family: 'WorkSans-ExtraBold';
+      font-size: 56px;
+      color: #2b2b2b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      font-family: 'WorkSans-SemiBold';
+      color: #bd1550; }
+    .wrapper .cta p {
+      font-family: 'GandhiSans-Italic';
+      font-size: 24px;
+      color: #2b2b2b;
+      text-align: center;
+      line-height: 36px;
+      width: 475px;
+      margin: 25px; }
+    .wrapper .cta .buttons {
+      font-family: 'GandhiSans-Regular';
+      font-size: 16px;
+      color: #2b2b2b;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      display: flex;
+      flex-direction: row; }
+      .wrapper .cta .buttons .button-class {
+        padding: 15px 25px;
+        color: white;
+        background-color: #2b2b2b;
+        border: 1px solid #2b2b2b; }
+        .wrapper .cta .buttons .button-class:hover {
+          border: 1px solid #bd1550;
+          color: #fff;
+          background-color: #bd1550; }
+      .wrapper .cta .buttons .button-workshop {
+        padding: 15px 8px;
+        color: #2b2b2b;
+        background-color: #fff;
+        border: 1px solid #2b2b2b; }
+        .wrapper .cta .buttons .button-workshop:hover {
+          border: 1px solid #bd1550;
+          color: #fff;
+          background-color: #bd1550; }
+    .wrapper .cta .join {
+      font-family: 'GandhiSans-Regular';
+      font-size: 16px;
+      color: #2b2b2b;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      text-align: center;
+      margin: 25px; }
+      .wrapper .cta .join:hover {
+        color: #bd1550; }
+  .wrapper .services h1 {
+    font-family: 'WorkSans-ExtraBold';
+    font-size: 56px;
+    color: #2b2b2b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center; }
+  .wrapper .services .services-container {
+    margin: 25px; }
+    .wrapper .services .services-container div {
+      text-align: center; }
+    .wrapper .services .services-container h3 {
+      font-family: 'GandhiSans-Regular';
+      font-size: 16px;
+      color: #2b2b2b;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 25px; }
+      .wrapper .services .services-container h3:hover {
+        color: #bd1550; }
+    @media (min-width: 736px) {
+      .wrapper .services .services-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center; } }
+  .wrapper .video {
+    text-align: center;
+    margin: 50px; }
+  .wrapper .quote {
+    text-align: center;
+    font-family: 'WorkSans-Thin';
+    font-size: 36px;
+    color: #2b2b2b;
+    line-height: 50px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 25px; }
+  .wrapper .quote-fitness .pink-quote {
+    color: #bd1550; }
+  .wrapper .fitness {
+    max-width: 1200px; }
+    .wrapper .fitness .beyonce-wrapper,
+    .wrapper .fitness .coyote-wrapper {
+      margin: 25px 15px; }
+      @media (min-width: 736px) {
+        .wrapper .fitness .beyonce-wrapper,
+        .wrapper .fitness .coyote-wrapper {
+          position: relative;
+          margin: 190px 50px 265px; } }
+      .wrapper .fitness .beyonce-wrapper .beyonce-img img,
+      .wrapper .fitness .beyonce-wrapper .coyote-img img,
+      .wrapper .fitness .coyote-wrapper .beyonce-img img,
+      .wrapper .fitness .coyote-wrapper .coyote-img img {
+        width: 60%; }
+      @media (min-width: 736px) {
+        .wrapper .fitness .beyonce-wrapper .beyonce-info,
+        .wrapper .fitness .beyonce-wrapper .coyote-info,
+        .wrapper .fitness .coyote-wrapper .beyonce-info,
+        .wrapper .fitness .coyote-wrapper .coyote-info {
+          width: 64%;
+          position: absolute;
+          top: 51%;
+          left: 35%;
+          background-color: #fff;
+          padding: 5px 15px; } }
+      .wrapper .fitness .beyonce-wrapper .beyonce-info h1,
+      .wrapper .fitness .beyonce-wrapper .coyote-info h1,
+      .wrapper .fitness .coyote-wrapper .beyonce-info h1,
+      .wrapper .fitness .coyote-wrapper .coyote-info h1 {
+        font-family: 'WorkSans-ExtraBold';
+        font-size: 56px;
+        color: #2b2b2b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 54px;
+        text-align: left;
+        text-transform: capitalize; }
+        .wrapper .fitness .beyonce-wrapper .beyonce-info h1 .pink-fitness,
+        .wrapper .fitness .beyonce-wrapper .coyote-info h1 .pink-fitness,
+        .wrapper .fitness .coyote-wrapper .beyonce-info h1 .pink-fitness,
+        .wrapper .fitness .coyote-wrapper .coyote-info h1 .pink-fitness {
+          font-family: 'Oblik-Bold';
+          font-size: 56px;
+          color: #bd1550;
+          text-transform: uppercase;
+          letter-spacing: 1px; }
+      .wrapper .fitness .beyonce-wrapper .beyonce-info p,
+      .wrapper .fitness .beyonce-wrapper .coyote-info p,
+      .wrapper .fitness .coyote-wrapper .beyonce-info p,
+      .wrapper .fitness .coyote-wrapper .coyote-info p {
+        font-family: 'GandhiSans-Italic';
+        font-size: 20px;
+        color: #2b2b2b;
+        line-height: 34px; }
+    .wrapper .fitness .bieber-wrapper,
+    .wrapper .fitness .chair-wrapper {
+      margin: 25px 15px;
+      text-align: right; }
+      @media (min-width: 736px) {
+        .wrapper .fitness .bieber-wrapper,
+        .wrapper .fitness .chair-wrapper {
+          position: relative;
+          margin: 75px 50px 250px; } }
+      .wrapper .fitness .bieber-wrapper .bieber-img img,
+      .wrapper .fitness .bieber-wrapper .chair-img img,
+      .wrapper .fitness .chair-wrapper .bieber-img img,
+      .wrapper .fitness .chair-wrapper .chair-img img {
+        width: 65%; }
+      @media (min-width: 736px) {
+        .wrapper .fitness .bieber-wrapper .bieber-info,
+        .wrapper .fitness .bieber-wrapper .chair-info,
+        .wrapper .fitness .chair-wrapper .bieber-info,
+        .wrapper .fitness .chair-wrapper .chair-info {
+          width: 50%;
+          position: absolute;
+          top: 55%;
+          background-color: #fff;
+          padding: 5px 15px; } }
+      .wrapper .fitness .bieber-wrapper .bieber-info h1,
+      .wrapper .fitness .bieber-wrapper .chair-info h1,
+      .wrapper .fitness .chair-wrapper .bieber-info h1,
+      .wrapper .fitness .chair-wrapper .chair-info h1 {
+        font-family: 'WorkSans-ExtraBold';
+        font-size: 56px;
+        color: #2b2b2b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        font-size: 54px;
+        text-align: right;
+        text-transform: capitalize; }
+        .wrapper .fitness .bieber-wrapper .bieber-info h1 .pink-fitness,
+        .wrapper .fitness .bieber-wrapper .chair-info h1 .pink-fitness,
+        .wrapper .fitness .chair-wrapper .bieber-info h1 .pink-fitness,
+        .wrapper .fitness .chair-wrapper .chair-info h1 .pink-fitness {
+          font-family: 'Oblik-Bold';
+          font-size: 56px;
+          color: #bd1550;
+          text-transform: uppercase;
+          letter-spacing: 1px; }
+      .wrapper .fitness .bieber-wrapper .bieber-info p,
+      .wrapper .fitness .bieber-wrapper .chair-info p,
+      .wrapper .fitness .chair-wrapper .bieber-info p,
+      .wrapper .fitness .chair-wrapper .chair-info p {
+        font-family: 'GandhiSans-Italic';
+        font-size: 20px;
+        color: #2b2b2b;
+        line-height: 34px; }
+    @media (min-width: 736px) {
+      .wrapper .fitness .coyote-wrapper {
+        margin-bottom: 330px; } }
+    @media (min-width: 736px) {
+      .wrapper .fitness .chair-wrapper {
+        margin-bottom: 400px; } }
+  .wrapper .find-us {
+    display: flex;
+    flex-direction: column-reverse; }
+    @media (min-width: 736px) {
+      .wrapper .find-us {
+        flex-direction: row; } }
+    .wrapper .find-us .find-us-info {
+      width: 100%; }
+      @media (min-width: 980px) {
+        .wrapper .find-us .find-us-info {
+          width: 40%; } }
+      .wrapper .find-us .find-us-info div {
+        text-align: center;
+        margin: 25px; }
+        .wrapper .find-us .find-us-info div h2 {
+          font-family: 'Oblik-Bold';
+          font-size: 56px;
+          color: #bd1550;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: 26px; }
+        .wrapper .find-us .find-us-info div p {
+          font-family: 'GandhiSans-Regular';
+          font-size: 16px;
+          color: #2b2b2b;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          text-align: center;
+          text-transform: inherit;
+          text-align: center;
+          line-height: 20px; }
+    .wrapper .find-us div.map {
+      display: none; }
+      @media (min-width: 980px) {
+        .wrapper .find-us div.map {
+          display: block; } }
+  .wrapper .footer {
+    height: 175px;
+    margin: 50px auto;
+    background-color: #2b2b2b; }
+    .wrapper .footer ul.footer-icons,
+    .wrapper .footer ul.footer-links {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      justify-content: center; }
+      .wrapper .footer ul.footer-icons li.footer-icon-item,
+      .wrapper .footer ul.footer-links li.footer-icon-item {
+        margin: 25px 25px; }
+      .wrapper .footer ul.footer-icons li.footer-link-item a:link,
+      .wrapper .footer ul.footer-links li.footer-link-item a:link {
+        color: #fff; }
+      .wrapper .footer ul.footer-icons li.footer-link-item a:hover,
+      .wrapper .footer ul.footer-links li.footer-link-item a:hover {
+        color: #bd1550; }
+    .wrapper .footer .footer-links-container {
+      display: flex;
+      justify-content: center;
+      color: #fff; }
+      .wrapper .footer .footer-links-container ul.footer-links li {
+        font-family: 'GandhiSans-Regular';
+        font-size: 16px;
+        color: #2b2b2b;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 10px 14px;
+        font-size: 12px;
+        color: #ffffff; }
+        .wrapper .footer .footer-links-container ul.footer-links li:hover {
+          color: #bd1550; }
+
+/*# sourceMappingURL=style.css.map */

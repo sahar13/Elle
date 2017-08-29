@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>elle fitness and social</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- main section -->
+    <div class="hero">
+      <nav class="nav">
+        <ul class="nav-main">
+          <li>
+            <a href="fitness.html">fitness</a>
+            <div class="dropdown">
+              <p><a href="#">schedule</a></p>
+              <p><a href="#">group classes</a></p>
+              <p><a href="#">personal training</a></p>
+            </div>
+          </li>
+          <li><a href="#">social</a>
+            <div class="dropdown">
+              <p><a href="#">workshops</a></p>
+              <p><a href="#">party packages</p>
+              <p><a href="#">pop-up shops</p>
+            </div>
+          </li>
+          <a href="index.html"><li class="logo"><img src="images/logo.png" width= "150px"></li></a>
+          <li><a href="#">pricing</a>
+            <div class="dropdown">
+              <p><a href="#">loy-elle-ty program</p>
+            </div>
+          </li>
+          <li><a href="findus.html">find us</a></li>
+        </ul>
+        <div class="nav-sm fitness-nav-sm">
+          <div id="hamburger">&#9776;</div>
+          <div id="cross">X</div>
+          <ul class="nav-sm-ul">
+            <li>
+              <a href="fitness.html">fitness</a>
+              <div class="dropdown">
+                <p><a href="#">schedule</a></p>
+                <p><a href="#">group classes</a></p>
+                <p><a href="#">personal training</a></p>
+              </div>
+            </li>
+            <li><a href="#">social</a>
+              <div class="dropdown">
+                <p><a href="#">workshops</a></p>
+                <p><a href="#">party packages</p>
+                <p><a href="#">pop-up shops</p>
+              </div>
+            </li>
+            <li><a href="#">pricing</a>
+              <div class="dropdown">
+                <p><a href="#">loy-elle-ty program</p>
+              </div>
+            </li>
+            <li><a href="findus.html">find us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </ul>
+  </div>
+
+    <!-- call to action -->
+    <div class="cta">
+      <h1><span id="fitfeb">Fit February</span> Challenge</h1>
+      <p>Commit to 5 classes per week for a chance to win a $300 gift card to Living Lighting on King!</p>
+      <div class="buttons">
+        <a href="#"><div class="button-class">Group Classes</div></a>
+        <a href="#"><div class="button-workshop">Dance Workshops</div></a>
+      </div>
+      <a href="#" class="join">Join Now</a>
+    </div>
+
+    <!-- services -->
+    <div class="services">
+      <h1>Bodies by <img src="images/logo.png" width="125px"></h1>
+      <div class="services-container">
+        <div class="pt">
+          <a href="#">
+            <img src="images/pt.png" alt="Rope Exercise">
+            <h3>Personal Training</h3>
+          </a>
+        </div>
+        <div class="cw">
+          <a href="#">
+            <img src="images/cw.png" alt="Dance Workshop">
+            <h3>Classes and Workshops</h3>
+          </a>
+        </div>
+        <div class="se">
+          <a href="">
+            <img src="images/se.png" alt="Pole Dancing">
+            <h3>Social Events</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- video -->
+    <div class="video">
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fellefitnessto%2Fvideos%2F917921778306864%2F&show_text=0&width=560" width="560" height="411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+    </div>
+
+    <!-- quote -->
+    <div class="quote">
+      <h1>Workout. Network. Socialize. Shop. Smile.</h1>
+      <h1>Welcome to <img src="images/logo.png" width="75px">.</h1>
+        <h1>It's a lifestyle.</h1>
+    </div>
+
+    <!-- footer -->
+  	<footer class="footer">
+      <ul class="footer-icons">
+        <li class="footer-icon-item">
+          <a href="https://www.facebook.com/elle-fitness-and-social-808360115929698/" target="_blank">
+            <img src="images/facebook.png" alt="Facebook Icon">
+          </a>
+        </li>
+        <li class="footer-icon-item">
+          <a href="https://twitter.com/ellefitnessto" target="_blank">
+            <img src="images/twitter.png" alt="Twitter Icon">
+          </a>
+        </li>
+        <li class="footer-icon-item">
+          <a href="https://instagram.com/ellefitnessto" target="_blank">
+            <img src="images/instagram.png" alt="Instagram Icon">
+          </a>
+        </li>
+      </ul>
+      <div class="footer-links-container">
+        <ul class="footer-links">
+          <a href="" class="footer-link-item"><li>About</li></a>|
+          <a href="" class="footer-link-item"><li>Loy-elle-ty Program</li></a>|
+          <a href="" class="footer-link-item"><li>Cancellation</li><a/>|
+          <a href="" class="footer-link-item"><li>580 King St W</li></a>|
+          <a href="" class="footer-link-item"><li>416.920.1400</li></a>
+        </ul>
+      </div>
+    </footer>
+
+  </div>
+
+  <script type="text/javascript">
+  $( "#cross" ).hide();
+  $( ".nav-sm-ul" ).hide();
+
+  $( "#hamburger" ).click(function() {
+    $( ".nav-sm-ul" ).slideToggle( "slow", function() {
+      $( "#hamburger" ).hide();
+      $( "#cross" ).show();
+    });
+  });
+
+  $( "#cross" ).click(function() {
+    $( ".nav-sm-ul" ).slideToggle( "slow", function() {
+      $( "#cross" ).hide();
+      $( "#hamburger" ).show();
+    });
+});
+  </script>
+</body>

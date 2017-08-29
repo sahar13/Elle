@@ -1,0 +1,524 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+ol {
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* end reset browser styles */
+
+/* @font-face Fonts*/
+@font-face {
+    font-family: 'Oblik-Bold';
+    src: url('../fonts/Oblik-Bold.otf');
+}
+
+@font-face {
+    font-family: 'GandhiSans-Bold';
+    src: url('../fonts/GandhiSans-Bold.otf');
+}
+
+@font-face {
+    font-family: 'GandhiSans-BoldItalic';
+    src: url('../fonts/GandhiSans-BoldItalic.otf');
+}
+
+@font-face {
+    font-family: 'GandhiSans-Italic';
+    src: url('../fonts/GandhiSans-Italic.otf');
+}
+
+@font-face {
+    font-family: 'GandhiSans-Regular.otf';
+    src: url('../fonts/GandhiSans-Regular.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Black';
+    src: url('../fonts/WorkSans-Black.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Bold';
+    src: url('../fonts/WorkSans-Bold.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-ExtraLight';
+    src: url('../fonts/WorkSans-ExtraLight.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-ExtraBold';
+    src: url('../fonts/WorkSans-ExtraBold.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Light';
+    src: url('../fonts/WorkSans-Light.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-SemiBold';
+    src: url('../fonts/WorkSans-SemiBold.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Hairline';
+    src: url('../fonts/WorkSans-Hairline.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Medium';
+    src: url('../fonts/WorkSans-Medium.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Regular';
+    src: url('../fonts/WorkSans-Regular.otf');
+}
+
+@font-face {
+    font-family: 'WorkSans-Thin';
+    src: url('../fonts/WorkSans-Thin.otf');
+}
+
+@mixin breakpoint($class) {
+  @if $class == md {
+    @media (min-width: 736px) { @content; }
+  }
+  @else if $class == lg {
+    @media (min-width: 980px) { @content; }
+  }
+}
+
+@mixin ul-style {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin flex-hor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@mixin font-h1 {
+  font-family: 'WorkSans-ExtraBold';
+  font-size: 56px;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+@mixin font-reg {
+  font-family: 'GandhiSans-Regular';
+  font-size: 16px;
+  color: #2b2b2b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin font-fitness-h1 {
+	font-family: 'Oblik-Bold';
+	font-size: 56px;
+	color: #bd1550;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+@mixin font-fitness-p {
+	font-family: 'GandhiSans-Italic';
+	font-size: 20px;
+	color: #2b2b2b;
+	line-height: 34px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+  .hero {
+    background-image: url(../images/hero.png);
+    height: 876px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .nav {
+      text-align: center;
+      padding-top: 40px;
+      ul.nav-main {
+        @include ul-style;
+				li {
+					display: none;
+					position: relative;
+					justify-content: left;
+					width: 19%;
+					&:hover .dropdown {
+						display: block;
+					}
+					a {
+						font-family: 'GandhiSans-Bold';
+						font-size: 20px;
+						letter-spacing: 1px;
+						color: #2b2b2b;
+						text-transform: lowercase;
+						color: #2b2b2b;
+						&:hover{color:#bd1660};
+					}
+					.dropdown {
+						position: absolute;
+						left: 15%;
+						display: none;
+						p {
+							background-color: #fff;
+							margin: 10px 0;
+							padding: 0 10px;
+							opacity: 0.9;
+							a {
+								@include font-reg;
+								text-transform: lowercase;
+								line-height: 32px;
+								&:hover{color:#bd1660};
+							}
+						}
+					}
+					@include breakpoint(md){
+						display: inline-block;
+					}
+				}
+			}
+			div.nav-sm {
+				text-align: center;
+				#hamburger,
+				#cross {
+					cursor: pointer;
+				}
+				ul.nav-sm-ul {
+					@include ul-style;
+					li {
+						margin: 10px;
+						a {
+							font-family: 'GandhiSans-Bold';
+							font-size: 20px;
+							letter-spacing: 1px;
+							color: #2b2b2b;
+							text-transform: lowercase;
+							color: #2b2b2b;
+							&:hover{color:#bd1660};
+						}
+						.dropdown {
+							p {
+								background-color: #fff;
+								margin: 10px 0;
+								padding: 0 10px;
+								opacity: 0.9;
+								a {
+									@include font-reg;
+									text-transform: lowercase;
+									line-height: 32px;
+									&:hover{color:#bd1660};
+								}
+							}
+						}
+					}
+				}
+				@include breakpoint(md){
+					display: none;
+				}
+			}
+			div.fitness-nav-sm {
+				text-align: center;
+			}
+		}
+  }
+	.hero-fitness {
+		background-image: none;
+		height: 525px;
+		@include breakpoint(md){
+			height: 310px;
+		}
+}
+
+  .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 50px auto;
+    padding: 25px;
+    h1 {
+      @include font-h1;
+    }
+    #fitfeb {
+      @include font-h1;
+      font-family: 'WorkSans-SemiBold';
+    	color: #bd1550;
+    }
+    p {
+      font-family: 'GandhiSans-Italic';
+      font-size: 24px;
+      color: #2b2b2b;
+      text-align: center;
+      line-height: 36px;
+      width: 475px;
+      margin: 25px;
+    }
+    .buttons {
+      @include font-reg;
+      display: flex;
+      flex-direction: row;
+      .button-class {
+        padding: 15px 25px;
+      	color: white;
+      	background-color: #2b2b2b;
+        border: 1px solid #2b2b2b;
+				&:hover {
+					border: 1px solid #bd1550;
+					color: #fff;
+					background-color: #bd1550;
+				}
+      }
+      .button-workshop {
+        padding: 15px 8px;
+      	color: #2b2b2b;
+        background-color: #fff;
+      	border: 1px solid #2b2b2b;
+				&:hover {
+					border: 1px solid #bd1550;
+					color: #fff;
+					background-color: #bd1550;
+				}
+      }
+    }
+    .join {
+      @include font-reg;
+      text-align: center;
+      margin: 25px;
+			&:hover {color: #bd1550;}
+    }
+  }
+  .services {
+    h1 {
+      @include font-h1;
+    }
+    .services-container {
+      margin: 25px;
+      div {
+        text-align: center;
+      }
+      h3 {
+        @include font-reg;
+        margin: 25px;
+				&:hover {color: #bd1550;}
+      }
+			@include breakpoint(md){
+				  @include flex-hor;
+			}
+    }
+  }
+  .video {
+    text-align: center;
+    margin: 50px;
+  }
+  .quote {
+    text-align: center;
+    font-family: 'WorkSans-Thin';
+    font-size: 36px;
+  	color: #2b2b2b;
+  	line-height: 50px;
+		border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+		padding: 25px;
+  }
+	.quote-fitness {
+		.pink-quote {
+			color: #bd1550;
+		}
+	}
+	.fitness {
+		max-width: 1200px;
+		.beyonce-wrapper,
+		.coyote-wrapper {
+			margin: 25px 15px;
+			@include breakpoint(md){
+				position: relative;
+				margin: 190px 50px 265px;
+			}
+			.beyonce-img,
+			.coyote-img {
+				img {
+					width: 60%;
+				}
+			}
+			.beyonce-info,
+			.coyote-info {
+				@include breakpoint(md){
+					width: 64%;
+					position: absolute;
+					top: 51%;
+					left: 35%;
+					background-color: #fff;
+					padding: 5px 15px;
+				}
+				h1 {
+					@include font-h1;
+					font-size: 54px;
+					text-align: left;
+					text-transform: capitalize;
+					.pink-fitness {
+						@include font-fitness-h1;
+					}
+				}
+				p {
+					@include font-fitness-p;
+				}
+			}
+		}
+		.bieber-wrapper,
+		.chair-wrapper {
+			margin: 25px 15px;
+			@include breakpoint(md){
+				position: relative;
+				margin: 75px 50px 250px;
+			}
+			text-align: right;
+			.bieber-img,
+			.chair-img {
+				img {
+					width: 65%;
+				}
+			}
+			.bieber-info,
+			.chair-info {
+				@include breakpoint(md) {
+					width: 50%;
+					position: absolute;
+					top: 55%;
+					background-color: #fff;
+					padding: 5px 15px;
+				}
+				h1 {
+					@include font-h1;
+					font-size: 54px;
+					text-align: right;
+					text-transform: capitalize;
+					.pink-fitness {
+						@include font-fitness-h1;
+					}
+				}
+				p {
+					@include font-fitness-p;
+				}
+			}
+		}
+		.coyote-wrapper{
+			@include breakpoint(md){
+				margin-bottom: 330px;
+			}
+		}
+		.chair-wrapper {
+			@include breakpoint(md){
+				margin-bottom: 400px;
+			}
+		}
+	}
+	.find-us {
+		display: flex;
+		flex-direction: column-reverse;
+		@include breakpoint(md){
+			flex-direction: row;
+		}
+		.find-us-info {
+			width: 100%;
+			@include breakpoint(lg){
+				width: 40%;
+			}
+			div {
+				text-align: center;
+				margin: 25px;;
+				h2 {
+					@include font-fitness-h1;
+					font-size: 26px;
+				}
+				p {
+					@include font-reg;
+					text-transform: inherit;
+					text-align: center;
+					line-height: 20px;
+				}
+			}
+		}
+		div.map {
+			display: none;
+			@include breakpoint(lg) {
+				display: block;
+			}
+		}
+	}
+  .footer {
+    height: 175px;
+    margin: 50px auto;
+    background-color: #2b2b2b;
+    ul.footer-icons,
+    ul.footer-links {
+      @include ul-style;
+      @include flex-hor;
+      justify-content: center;
+      li.footer-icon-item {
+        margin: 25px 25px;
+      }
+      li.footer-link-item {
+        a {
+          &:link {color: #fff;}
+          &:visited {};
+          &:hover {color: #bd1550;};
+          &:active {};
+        }
+      }
+    }
+    .footer-links-container {
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      ul.footer-links li {
+        @include font-reg;
+        margin: 10px 14px;
+      	font-size: 12px;
+      	color: #ffffff;
+        &:hover{color:#bd1550;}
+      }
+    }
+  }
+}
